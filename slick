@@ -1,0 +1,39 @@
+ <link rel="preload" href="{{ 'slick.css' | asset_url }}" rel="stylesheet" as="style" onload="this.rel='stylesheet'">
+ 
+  <script src="{{ 'slick.js' | asset_url }}" defer="defer"></script>
+  
+  
+  $( document ).ready(function() {
+
+	setTimeout(function(){
+  $('.pe-tab-section ul').slick({
+	  infinite: true,
+	  dots: false,
+	  arrows: false,
+	  //centerMode: true,
+	  mobileFirst: true,
+	  // slidesToShow: 5,
+	  // slidesToScroll: 5,
+	  //centerPadding: '60px',
+	  responsive: [
+		{
+		  breakpoint: 601,
+		  settings: "unslick"
+		},
+		{
+		  breakpoint: 600,
+		  settings: {
+			slidesToShow: 4,
+			slidesToScroll: 4 
+		  }
+		}
+	  ]
+  });
+  
+  }, 300);
+  
+  });
+
+
+  
+  
